@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Cafe — Coffee, Food & Chill Vibes | Cadillac, MI</title>
+  <meta name="description" content="Cozy Cafe in Cadillac, MI — your spot for coffee, pastries, sandwiches and chill vibes. Students, professionals, and locals welcome.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Cozy Cafe Home">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+          <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+          <line x1="6" y1="2" x2="6" y2="4"/>
+          <line x1="10" y1="2" x2="10" y2="4"/>
+          <line x1="14" y1="2" x2="14" y2="4"/>
+        </svg>
+        Cozy Cafe
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Welcome to</p>
+      <h1 class="hero-title">Cozy Cafe</h1>
+      <p class="hero-tagline">Coffee, Food &amp; Chill Vibes</p>
+      <p class="hero-description">Your cozy spot in Cadillac for freshly baked pastries, hearty sandwiches, and the perfect cup of coffee.</p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+        <a href="contact.html" class="btn btn-outline">Get Directions</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Why Choose Us</p>
+        <h2 class="section-title">A Little Something for Everyone</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+          </div>
+          <h3 class="feature-title">Fresh Coffee Daily</h3>
+          <p class="feature-text">Every cup brewed fresh — from bold espressos to creamy lattes, we've got your morning covered.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="feature-title">Baked In-House</h3>
+          <p class="feature-text">Butter croissants, cinnamon rolls, blueberry muffins — all baked fresh every morning.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3z"/><path d="M14 3h7v7h-7z"/><path d="M3 14h7v7H3z"/><path d="M14 14h7v7h-7z"/></svg>
+          </div>
+          <h3 class="feature-title">Free Wi-Fi</h3>
+          <p class="feature-text">Need a spot to study or work? Comfy seating, great lighting, and fast Wi-Fi await you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Items Section -->
+  <section class="popular">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Customer Favorites</p>
+        <h2 class="section-title">Popular Picks</h2>
+      </div>
+      <div class="popular-grid">
+        <div class="popular-card">
+          <div class="popular-image" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78d701a3d?w=400&h=300&fit=crop');">
+            <span class="popular-badge">Bestseller</span>
+          </div>
+          <div class="popular-info">
+            <h3>Butter Croissant</h3>
+            <p>Flaky, golden, and perfectly buttery</p>
+            <span class="popular-price">$2.00</span>
+          </div>
+        </div>
+        <div class="popular-card">
+          <div class="popular-image" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop');">
+            <span class="popular-badge">Popular</span>
+          </div>
+          <div class="popular-info">
+            <h3>Beef Burger</h3>
+            <p>Juicy patty with all the fixings</p>
+            <span class="popular-price">$5.00</span>
+          </div>
+        </div>
+        <div class="popular-card">
+          <div class="popular-image" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop');">
+            <span class="popular-badge">Must Try</span>
+          </div>
+          <div class="popular-info">
+            <h3>Cinnamon Roll</h3>
+            <p>Warm, gooey, with cream cheese frosting</p>
+            <span class="popular-price">$3.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-lg">
+        <a href="menu.html" class="btn btn-primary">See Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready for a Cozy Break?</h2>
+        <p class="cta-text">Drop by for freshly brewed coffee and homemade treats. We're open every day!</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">Visit Us Today</a>
+          <a href="menu.html" class="btn btn-outline-light btn-lg">View Menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+              <line x1="6" y1="2" x2="6" y2="4"/>
+              <line x1="10" y1="2" x2="10" y2="4"/>
+              <line x1="14" y1="2" x2="14" y2="4"/>
+            </svg>
+            Cozy Cafe
+          </div>
+          <p class="footer-tagline">Coffee, Food &amp; Chill Vibes</p>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Hours</h4>
+          <ul class="footer-links">
+            <li>Mon–Fri: 6am–8pm</li>
+            <li>Sat–Sun: 7am–9pm</li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li>
+              <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              8834 E 34 Rd #131, Cadillac, MI 49601
+            </li>
+            <li>
+              <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              (56) 882-8901
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cozy Cafe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Cozy Cafe | Cadillac, MI</title>
+  <meta name="description" content="Cozy Cafe menu — freshly baked pastries, hearty sandwiches, burgers, and more in Cadillac, MI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Cozy Cafe Home">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+          <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+          <line x1="6" y1="2" x2="6" y2="4"/>
+          <line x1="10" y1="2" x2="10" y2="4"/>
+          <line x1="14" y1="2" x2="14" y2="4"/>
+        </svg>
+        Cozy Cafe
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header menu-header">
+    <div class="container">
+      <p class="page-subtitle">Freshly Made</p>
+      <h1 class="page-title">Our Menu</h1>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <div class="container">
+
+      <!-- Breakfast & Pastries -->
+      <div class="menu-category">
+        <div class="menu-category-header">
+          <svg class="menu-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <h2 class="menu-category-title">Breakfast &amp; Pastries</h2>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Butter Croissant</h3>
+              <span class="menu-price">$2.00</span>
+            </div>
+            <p>Flaky, golden, perfectly buttery — baked fresh every morning</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Chocolate Croissant</h3>
+              <span class="menu-price">$1.50</span>
+            </div>
+            <p>Rich chocolate filling wrapped in flaky pastry</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Cinnamon Roll</h3>
+              <span class="menu-price">$3.00</span>
+            </div>
+            <p>Warm, gooey cinnamon swirl with cream cheese frosting</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Banana Bread Slice</h3>
+              <span class="menu-price">$1.00</span>
+            </div>
+            <p>Moist and sweet — the perfect companion to your coffee</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Blueberry Muffin</h3>
+              <span class="menu-price">$1.20</span>
+            </div>
+            <p>Bursting with real blueberries, topped with a crumbly streusel</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Cheese Danish</h3>
+              <span class="menu-price">$1.40</span>
+            </div>
+            <p>Flaky pastry with a creamy cheese center</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Toast &amp; Jam</h3>
+              <span class="menu-price">$0.90</span>
+            </div>
+            <p>Thick-cut toast with house-made jam — simple and satisfying</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Pancake Stack</h3>
+              <span class="menu-price">$0.80</span>
+            </div>
+            <p>Fluffy pancakes with maple syrup and butter</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch & Sandwiches -->
+      <div class="menu-category">
+        <div class="menu-category-header">
+          <svg class="menu-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M5 17h14"/><path d="M5 7h14"/></svg>
+          <h2 class="menu-category-title">Lunch &amp; Sandwiches</h2>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Club Sandwich</h3>
+              <span class="menu-price">$1.50</span>
+            </div>
+            <p>Triple-decker with turkey, bacon, lettuce, and tomato</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Chicken Sandwich</h3>
+              <span class="menu-price">$2.00</span>
+            </div>
+            <p>Grilled chicken breast with fresh greens and herb mayo</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Veggie Sandwich</h3>
+              <span class="menu-price">$1.00</span>
+            </div>
+            <p>Seasonal veggies with hummus on whole wheat</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Beef Burger</h3>
+              <span class="menu-price">$5.00</span>
+            </div>
+            <p>Juicy beef patty with lettuce, tomato, onion, and pickles</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Chicken Burger</h3>
+              <span class="menu-price">$8.00</span>
+            </div>
+            <p>Crispy chicken fillet with coleslaw and chipotle sauce</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>French Fries</h3>
+              <span class="menu-price">$5.00</span>
+            </div>
+            <p>Crispy golden fries — the perfect side</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Meat Pie</h3>
+              <span class="menu-price">$8.00</span>
+            </div>
+            <p>Hearty beef pie with a flaky golden crust</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Sausage Roll</h3>
+              <span class="menu-price">$7.00</span>
+            </div>
+            <p>Seasoned sausage in puff pastry — savory and satisfying</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Spring Rolls</h3>
+              <span class="menu-price">$2.00</span>
+            </div>
+            <p>Crispy vegetable spring rolls with sweet chili sauce</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="menu-category">
+        <div class="menu-category-header">
+          <svg class="menu-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+          <h2 class="menu-category-title">Drinks &amp; Desserts</h2>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Freshly Brewed Coffee</h3>
+              <span class="menu-price">$2.50</span>
+            </div>
+            <p>Bold and smooth — our house blend roasted daily</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Espresso</h3>
+              <span class="menu-price">$3.00</span>
+            </div>
+            <p>Rich, concentrated shot of our finest beans</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Cappuccino</h3>
+              <span class="menu-price">$4.00</span>
+            </div>
+            <p>Espresso, steamed milk, and velvety foam</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Hot Chocolate</h3>
+              <span class="menu-price">$3.50</span>
+            </div>
+            <p>Rich and creamy — perfect for chilly Michigan mornings</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Iced Latte</h3>
+              <span class="menu-price">$4.50</span>
+            </div>
+            <p>Cool espresso over ice with your choice of milk</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Herbal Tea</h3>
+              <span class="menu-price">$2.00</span>
+            </div>
+            <p>A selection of premium loose-leaf teas</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note -->
+      <div class="menu-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <p>Prices and availability may vary. Please ask your server about daily specials and seasonal items.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Hungry Yet?</h2>
+        <p class="cta-text">Come taste the difference. Fresh coffee and homemade food waiting for you.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">Visit Us Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+              <line x1="6" y1="2" x2="6" y2="4"/>
+              <line x1="10" y1="2" x2="10" y2="4"/>
+              <line x1="14" y1="2" x2="14" y2="4"/>
+            </svg>
+            Cozy Cafe
+          </div>
+          <p class="footer-tagline">Coffee, Food &amp; Chill Vibes</p>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Hours</h4>
+          <ul class="footer-links">
+            <li>Mon–Fri: 6am–8pm</li>
+            <li>Sat–Sun: 7am–9pm</li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li>
+              <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              8834 E 34 Rd #131, Cadillac, MI 49601
+            </li>
+            <li>
+              <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              (56) 882-8901
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cozy Cafe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
