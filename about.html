@@ -1,200 +1,396 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Cozy Cafe | Cadillac, MI</title>
-  <meta name="description" content="Learn about Cozy Cafe in Cadillac, MI — our story, our values, and what makes us your cozy neighborhood spot.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo" aria-label="Cozy Cafe Home">
-        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
-          <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
-          <line x1="6" y1="2" x2="6" y2="4"/>
-          <line x1="10" y1="2" x2="10" y2="4"/>
-          <line x1="14" y1="2" x2="14" y2="4"/>
-        </svg>
-        Cozy Cafe
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Page Header -->
-  <header class="page-header">
-    <div class="container">
-      <p class="page-subtitle">Our Story</p>
-      <h1 class="page-title">About Cozy Cafe</h1>
-    </div>
-  </header>
-
-  <!-- Our Story -->
-  <section class="about-story">
-    <div class="container">
-      <div class="story-grid">
-        <div class="story-image">
-          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop" alt="Interior of Cozy Cafe with warm lighting and wooden furniture" loading="lazy">
-        </div>
-        <div class="story-content">
-          <h2>Where Comfort Meets Community</h2>
-          <p>Cozy Cafe started with a simple idea: create a space where you can slow down, enjoy great coffee, and feel at home. Nestled in Cadillac, Michigan, we've been serving our community with freshly brewed coffee, homemade pastries, and hearty meals made with love.</p>
-          <p>Whether you're a student cramming for exams, a professional looking for a quiet workspace, or a family enjoying a weekend treat — there's a seat waiting for you at Cozy Cafe.</p>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Cozy Cafe | Cadillac, MI</title>
+    <meta
+      name="description"
+      content="Learn about Cozy Cafe in Cadillac, MI — our story, our values, and what makes us your cozy neighborhood spot."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" aria-label="Cozy Cafe Home">
+          <svg
+            class="logo-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+            <line x1="6" y1="2" x2="6" y2="4" />
+            <line x1="10" y1="2" x2="10" y2="4" />
+            <line x1="14" y1="2" x2="14" y2="4" />
+          </svg>
+          Cozy Cafe
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Our Values -->
-  <section class="values-section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-subtitle">What We Believe In</p>
-        <h2 class="section-title">Our Values</h2>
+    <!-- Page Header -->
+    <header class="page-header">
+      <div class="container">
+        <p class="page-subtitle">Our Story</p>
+        <h1 class="page-title">About Cozy Cafe</h1>
       </div>
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3>Made with Love</h3>
-          <p>Every pastry is baked in-house, every sandwich is made to order. We believe food tastes better when it's crafted with care.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Community First</h3>
-          <p>We're more than a cafe — we're a gathering place. A spot where neighbors become friends over a shared cup of coffee.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Fresh &amp; Local</h3>
-          <p>We source our ingredients locally whenever possible, supporting Cadillac farmers and ensuring the freshest flavors on your plate.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Atmosphere -->
-  <section class="atmosphere-section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-subtitle">The Vibe</p>
-        <h2 class="section-title">Come for the Coffee, Stay for the Atmosphere</h2>
-      </div>
-      <div class="atmosphere-grid">
-        <div class="atmosphere-card">
-          <div class="atmosphere-image" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop');"></div>
-          <div class="atmosphere-info">
-            <h3>Free Wi-Fi</h3>
-            <p>Fast, reliable internet — perfect for working or studying.</p>
+    <!-- Our Story -->
+    <section class="about-story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-image">
+            <img
+              src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop"
+              alt="Interior of Cozy Cafe with warm lighting and wooden furniture"
+              loading="lazy"
+            />
           </div>
-        </div>
-        <div class="atmosphere-card">
-          <div class="atmosphere-image" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=300&fit=crop');"></div>
-          <div class="atmosphere-info">
-            <h3>Comfy Seating</h3>
-            <p>Plush chairs and cozy nooks — settle in and stay a while.</p>
-          </div>
-        </div>
-        <div class="atmosphere-card">
-          <div class="atmosphere-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop');"></div>
-          <div class="atmosphere-info">
-            <h3>Great Lighting</h3>
-            <p>Warm, inviting lighting that makes every corner feel like home.</p>
+          <div class="story-content">
+            <h2>Where Comfort Meets Community</h2>
+            <p>
+              Cozy Cafe started with a simple idea: create a space where you can
+              slow down, enjoy great coffee, and feel at home. Nestled in
+              Cadillac, Michigan, we've been serving our community with freshly
+              brewed coffee, homemade pastries, and hearty meals made with love.
+            </p>
+            <p>
+              Whether you're a student cramming for exams, a professional
+              looking for a quiet workspace, or a family enjoying a weekend
+              treat — there's a seat waiting for you at Cozy Cafe.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <h2 class="cta-title">Come Say Hello!</h2>
-        <p class="cta-text">We'd love to welcome you. Check out our menu or find us on the map.</p>
-        <div class="cta-actions">
-          <a href="menu.html" class="btn btn-primary btn-lg">See the Menu</a>
-          <a href="contact.html" class="btn btn-outline-light btn-lg">Find Us</a>
+    <!-- Our Values -->
+    <section class="values-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-subtitle">What We Believe In</p>
+          <h2 class="section-title">Our Values</h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+            </div>
+            <h3>Made with Love</h3>
+            <p>
+              Every pastry is baked in-house, every sandwich is made to order.
+              We believe food tastes better when it's crafted with care.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3>Community First</h3>
+            <p>
+              We're more than a cafe — we're a gathering place. A spot where
+              neighbors become friends over a shared cup of coffee.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3>Fresh &amp; Local</h3>
+            <p>
+              We source our ingredients locally whenever possible, supporting
+              Cadillac farmers and ensuring the freshest flavors on your plate.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
-              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
-              <line x1="6" y1="2" x2="6" y2="4"/>
-              <line x1="10" y1="2" x2="10" y2="4"/>
-              <line x1="14" y1="2" x2="14" y2="4"/>
-            </svg>
-            Cozy Cafe
+    <!-- Atmosphere -->
+    <section class="atmosphere-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-subtitle">The Vibe</p>
+          <h2 class="section-title">
+            Come for the Coffee, Stay for the Atmosphere
+          </h2>
+        </div>
+        <div class="atmosphere-grid">
+          <div class="atmosphere-card">
+            <div
+              class="atmosphere-image"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop&quot;);
+              "
+            ></div>
+            <div class="atmosphere-info">
+              <h3>Free Wi-Fi</h3>
+              <p>Fast, reliable internet — perfect for working or studying.</p>
+            </div>
           </div>
-          <p class="footer-tagline">Coffee, Food &amp; Chill Vibes</p>
+          <div class="atmosphere-card">
+            <div
+              class="atmosphere-image"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=300&fit=crop&quot;);
+              "
+            ></div>
+            <div class="atmosphere-info">
+              <h3>Comfy Seating</h3>
+              <p>Plush chairs and cozy nooks — settle in and stay a while.</p>
+            </div>
+          </div>
+          <div class="atmosphere-card">
+            <div
+              class="atmosphere-image"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop&quot;);
+              "
+            ></div>
+            <div class="atmosphere-info">
+              <h3>Great Lighting</h3>
+              <p>
+                Warm, inviting lighting that makes every corner feel like home.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Come Say Hello!</h2>
+          <p class="cta-text">
+            We'd love to welcome you. Check out our menu or find us on the map.
+          </p>
+          <div class="cta-actions">
+            <a href="menu.html" class="btn btn-primary btn-lg">See the Menu</a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg"
+              >Find Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <svg
+                class="logo-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+                <line x1="6" y1="2" x2="6" y2="4" />
+                <line x1="10" y1="2" x2="10" y2="4" />
+                <line x1="14" y1="2" x2="14" y2="4" />
+              </svg>
+              Cozy Cafe
+            </div>
+            <p class="footer-tagline">Coffee, Food &amp; Chill Vibes</p>
+          </div>
+          <div class="footer-links-group">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4 class="footer-heading">Hours</h4>
+            <ul class="footer-links">
+              <li>Mon–Fri: 6am–8pm</li>
+              <li>Sat–Sun: 7am–9pm</li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4 class="footer-heading">Contact</h4>
+            <ul class="footer-links">
+              <li>
+                <svg
+                  class="footer-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                8834 E 34 Rd #131, Cadillac, MI 49601
+              </li>
+              <li>
+                <svg
+                  class="footer-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                (56) 882-8901
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="footer-links-group">
-          <h4 class="footer-heading">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+          <h4 class="footer-heading">Follow Us</h4>
+          <div class="footer-social">
+            <a
+              href="https://instagram.com/cozycafe"
+              class="social-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="5" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1.5"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://facebook.com/cozycafe"
+              class="social-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://twitter.com/cozycafe"
+              class="social-link"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 4l11.733 16h4.267l-11.733-16z" />
+                <path d="M4 20l6.768-6.768M20 4l-6.768 6.768" />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="footer-links-group">
-          <h4 class="footer-heading">Hours</h4>
-          <ul class="footer-links">
-            <li>Mon–Fri: 6am–8pm</li>
-            <li>Sat–Sun: 7am–9pm</li>
-          </ul>
-        </div>
-        <div class="footer-links-group">
-          <h4 class="footer-heading">Contact</h4>
-          <ul class="footer-links">
-            <li>
-              <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              8834 E 34 Rd #131, Cadillac, MI 49601
-            </li>
-            <li>
-              <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              (56) 882-8901
-            </li>
-          </ul>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Cozy Cafe. All rights reserved.</p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Cozy Cafe. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
