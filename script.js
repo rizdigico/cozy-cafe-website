@@ -1,160 +1,253 @@
 // Cozy Cafe — JavaScript
 (function () {
-  'use strict';
+  "use strict";
+
+  // --- Scroll progress bar ---
+  var progressBar = document.createElement("div");
+  progressBar.className = "scroll-progress";
+  progressBar.style.width = "0%";
+  document.body.appendChild(progressBar);
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      var scrollTop = window.pageYOffset;
+      var docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      var scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = scrollPercent + "%";
+    },
+    { passive: true },
+  );
 
   // --- Navbar scroll effect ---
-  const navbar = document.getElementById('navbar');
+  var navbar = document.getElementById("navbar");
   if (navbar) {
-    let lastScroll = 0;
-    window.addEventListener('scroll', function () {
-      const currentScroll = window.pageYOffset;
-      if (currentScroll > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-      lastScroll = currentScroll;
-    }, { passive: true });
+    var ticking = false;
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!ticking) {
+          requestAnimationFrame(function () {
+            if (window.pageYOffset > 50) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      },
+      { passive: true },
+    );
   }
 
   // --- Mobile nav toggle ---
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
+  var navToggle = document.getElementById("navToggle");
+  var navLinks = document.getElementById("navLinks");
+
+  // Create overlay for mobile nav
+  var navOverlay = document.createElement("div");
+  navOverlay.className = "nav-overlay";
+  document.body.appendChild(navOverlay);
+
+  function closeMobileNav() {
+    navLinks.classList.remove("open");
+    navToggle.classList.remove("active");
+    navToggle.setAttribute("aria-expanded", "false");
+    navOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  function openMobileNav() {
+    navLinks.classList.add("open");
+    navToggle.classList.add("active");
+    navToggle.setAttribute("aria-expanded", "true");
+    navOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
 
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function () {
-      const isOpen = navLinks.classList.toggle('open');
-      navToggle.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', isOpen);
+    navToggle.addEventListener("click", function () {
+      if (navLinks.classList.contains("open")) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
 
-    // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navLinks.classList.remove('open');
-        navToggle.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeMobileNav();
       });
     });
 
-    // Close menu on outside click
-    document.addEventListener('click', function (e) {
-      if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-        navLinks.classList.remove('open');
-        navToggle.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
+    navOverlay.addEventListener("click", closeMobileNav);
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && navLinks.classList.contains("open")) {
+        closeMobileNav();
       }
     });
   }
 
   // --- Contact form validation ---
-  const contactForm = document.getElementById('contactForm');
+  var contactForm = document.getElementById("contactForm");
   if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
+    contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      let isValid = true;
+      var isValid = true;
 
-      // Name validation
-      const name = document.getElementById('name');
-      const nameGroup = name.closest('.form-group');
+      var name = document.getElementById("name");
+      var nameGroup = name.closest(".form-group");
       if (!name.value.trim()) {
-        nameGroup.classList.add('error');
+        nameGroup.classList.add("error");
         isValid = false;
       } else {
-        nameGroup.classList.remove('error');
+        nameGroup.classList.remove("error");
       }
 
-      // Email validation
-      const email = document.getElementById('email');
-      const emailGroup = email.closest('.form-group');
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var email = document.getElementById("email");
+      var emailGroup = email.closest(".form-group");
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
-        emailGroup.classList.add('error');
+        emailGroup.classList.add("error");
         isValid = false;
       } else {
-        emailGroup.classList.remove('error');
+        emailGroup.classList.remove("error");
       }
 
-      // Subject validation
-      const subject = document.getElementById('subject');
-      const subjectGroup = subject.closest('.form-group');
+      var subject = document.getElementById("subject");
+      var subjectGroup = subject.closest(".form-group");
       if (!subject.value.trim()) {
-        subjectGroup.classList.add('error');
+        subjectGroup.classList.add("error");
         isValid = false;
       } else {
-        subjectGroup.classList.remove('error');
+        subjectGroup.classList.remove("error");
       }
 
-      // Message validation
-      const message = document.getElementById('message');
-      const messageGroup = message.closest('.form-group');
+      var message = document.getElementById("message");
+      var messageGroup = message.closest(".form-group");
       if (!message.value.trim()) {
-        messageGroup.classList.add('error');
+        messageGroup.classList.add("error");
         isValid = false;
       } else {
-        messageGroup.classList.remove('error');
+        messageGroup.classList.remove("error");
       }
 
       if (isValid) {
-        // Show success message
-        const successEl = document.getElementById('formSuccess');
+        var successEl = document.getElementById("formSuccess");
         if (successEl) {
-          successEl.classList.add('visible');
+          successEl.classList.add("visible");
         }
-        // Disable submit button
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        var submitBtn = contactForm.querySelector('button[type="submit"]');
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.textContent = 'Message Sent!';
+          submitBtn.textContent = "Message Sent!";
+          submitBtn.style.opacity = "0.7";
         }
-        // Reset form
         contactForm.reset();
+        contactForm.querySelectorAll(".form-group").forEach(function (g) {
+          g.classList.remove("error");
+        });
       }
     });
 
-    // Clear error on input
-    contactForm.querySelectorAll('input, textarea').forEach(function (input) {
-      input.addEventListener('input', function () {
-        this.closest('.form-group').classList.remove('error');
+    contactForm.querySelectorAll("input, textarea").forEach(function (input) {
+      input.addEventListener("input", function () {
+        this.closest(".form-group").classList.remove("error");
       });
     });
   }
 
   // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      const target = document.querySelector(targetId);
+    anchor.addEventListener("click", function (e) {
+      var targetId = this.getAttribute("href");
+      if (targetId === "#") return;
+      var target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
   });
 
-  // --- Intersection Observer for fade-in animation ---
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  // --- Staggered Intersection Observer ---
+  function createStaggerObserver(selector, baseDelay) {
+    baseDelay = baseDelay || 80;
+    var elements = document.querySelectorAll(selector);
+    if (!elements.length) return;
 
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-      }
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var parent = entry.target.parentElement;
+            var siblings = parent
+              ? Array.from(parent.querySelectorAll(selector))
+              : [];
+            var index = siblings.indexOf(entry.target);
+            var delay = index >= 0 ? index * baseDelay : 0;
+
+            setTimeout(function () {
+              entry.target.classList.add("visible");
+            }, delay);
+
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.08,
+        rootMargin: "0px 0px -30px 0px",
+      },
+    );
+
+    elements.forEach(function (el) {
+      observer.observe(el);
     });
-  }, observerOptions);
+  }
 
-  // Observe elements for fade-in
-  document.querySelectorAll('.feature-card, .popular-card, .value-card, .atmosphere-card, .menu-item, .contact-detail-item').forEach(function (el) {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+  // Staggered card animations
+  createStaggerObserver(".feature-card", 100);
+  createStaggerObserver(".popular-card", 120);
+  createStaggerObserver(".value-card", 100);
+  createStaggerObserver(".atmosphere-card", 120);
+  createStaggerObserver(".menu-item", 60);
+  createStaggerObserver(".contact-detail-item", 100);
+
+  // Single element reveal animations
+  var singleElements = document.querySelectorAll(
+    ".section-header, .story-image, .story-content, .cta-content, .menu-category-header, .contact-info, .contact-form-wrapper, .map-section, .menu-note, .footer",
+  );
+  var singleObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          singleObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.08,
+      rootMargin: "0px 0px -30px 0px",
+    },
+  );
+
+  singleElements.forEach(function (el) {
+    singleObserver.observe(el);
   });
 
+  // --- Keyboard nav indicator ---
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Tab") {
+      document.body.classList.add("keyboard-nav");
+    }
+  });
+  document.addEventListener("mousedown", function () {
+    document.body.classList.remove("keyboard-nav");
+  });
 })();
