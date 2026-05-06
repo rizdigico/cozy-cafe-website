@@ -1149,20 +1149,26 @@ ul {
 /* Social Links */
 .footer-social {
   display: flex;
-  gap: var(--space-md);
-  margin-top: var(--space-xs);
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
 }
 
 .social-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: rgba(249, 247, 245, 0.1);
-  color: rgba(249, 247, 245, 0.8);
-  transition: all var(--transition-base);
+  background: rgba(249, 247, 245, 0.12);
+  color: rgba(249, 247, 245, 0.75);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .social-link:hover {
@@ -1172,8 +1178,11 @@ ul {
 }
 
 .social-link svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  display: block;
+  max-width: 18px;
+  max-height: 18px;
 }
 
 .footer-bottom {
